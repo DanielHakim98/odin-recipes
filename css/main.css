@@ -4,15 +4,18 @@ body{
     font-weight: 400;
     text-align: center;
     background-color: thistle;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
 
 h1{
     font-size: 3rem;
-    
     background-color: plum;
+    padding: 1rem;
 }
 
-#disclaimer{ 
+#read{ 
     font-size: 1.5rem;
     max-width: 50%;
     margin: .75rem auto;
@@ -31,12 +34,15 @@ ul li{
     max-width: 30%;
     margin: 0 auto;
     background-color: powderblue;
+    padding: 1rem 0;
 }
 
 #list{
     max-width: 50%;
     margin: .75rem auto;
     font-size: 1.5rem;
+    background-color: powderblue;
+    padding: 1rem 0.25rem;
 }
 
 footer{
@@ -47,8 +53,9 @@ footer{
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: whitesmoke;
+   background-color: plum;
    padding: 1rem;
+   flex-wrap: wrap;
 }
 
 span{
