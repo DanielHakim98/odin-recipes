@@ -6,3 +6,7 @@ that I learn while working with this project.
 -Redesign the main page with CSS 
 -Manipulate padding smoothly while hovering on links with "transition"
 -linear gradient color for background of the body.
+
+22 Sep 21
+-Made massive css styling on each recipes
+-The "acknowledgement" was moved into footer.
