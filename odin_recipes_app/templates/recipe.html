@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ recipe['name'] }}</h1>
+
+    <img src="{{ recipe['img']['src'] }}" alt="{{ recipe['img']['alt'] }}">
+    <!--Description-->
+    <div class="description">
+        <h2>Description</h2>
+        <p>{{ recipe['description'] }}</p>
+    </div>
+    <!--Ingredients-->
+    <div class="ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+            {% for item in recipe['ingredients'] %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!--Steps-->
+    <div class="steps">
+        <h2>Steps</h2>
+        <ol>
+            {% for item in recipe['steps'] %}
+            <li>{{loop.index0 + 1}}) {{ item }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+{% endblock %}

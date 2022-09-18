@@ -1,0 +1,1 @@
+from odin_recipes_app import app

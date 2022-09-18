@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/reset.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <title>Odin Recipes by Daniel Hakim</title>
+    <link href="{{ url_for('static',filename='reset.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static',filename='main.css') }}" rel='stylesheet' type="text/css">
+    <title>{{ title }} | Odin Recipes</title>
 </head>
 <body>
-
     <header>
         <div class="header-logo">Odin Recipes</div>
         <nav>
@@ -20,28 +19,17 @@
             </ul>
         </nav>
     </header>
-   
-    <div class="listing">
-        <p class="list">List of my favourite food are:</p>
-        <ul>
-            <li><a href="recipes/nasigoreng.html">Nasi Goreng (Indonesia)</a></li>
-            <li><a href="recipes/maggikari.html">Maggi Kari</a></li>
-            <li><a href="recipes/boiledchicken.html">Boiled Chicken</a></li>
-        </ul>
-    </div>
-    <!-- <p id="read"> All recipes right and work belongs to their respective owners and content creators. I am merely copying the recipes from them for HTML practices.</p> -->
+    {% block content %} {% endblock %}
     <footer>
-        
         <!-- <p id="read"> All recipes right and work belongs to their respective owners and content creators. I am merely copying the recipes from them for HTML practices.</p> -->
         <div class="footer">
             <p>Created by</p>
             <span><a href="https://github.com/DanielHakim98">DanielHakim98.</a></span>
             <p>Of course, with guidance from</p>
             <span><a href="https://www.theodinproject.com/">The Odin Project.</a></span>
-            <p>and other resources on Internet.</p> 
+            <p>and other resources on Internet.</p>
             <p> All recipes right and work belongs to their respective owners and content creators. I am merely copying the recipes from them for HTML practices.</p>
         </div>
     </footer>
-
 </body>
 </html>
