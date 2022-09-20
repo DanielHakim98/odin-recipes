@@ -4,9 +4,9 @@
     <div class="listing">
         <p class="list">List of my favourite food are:</p>
         <ul>
-            <li><a href="">Nasi Goreng (Indonesia)</a></li>
-            <li><a href="">Maggi Kari</a></li>
-            <li><a href="">Boiled Chicken</a></li>
+            <li><a href="#">Nasi Goreng (Indonesia)</a></li>
+            <li><a href="{{ url_for('recipe',recipe_name='maggikari') }}">Maggi Kari</a></li>
+            <li><a href="{{ url_for('recipe',recipe_name='boiledchicken') }}">Boiled Chicken</a></li>
         </ul>
     </div>
 {% endblock %}

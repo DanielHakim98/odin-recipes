@@ -1,6 +1,6 @@
-from flask import render_template,redirect
+from flask import render_template,redirect,url_for
 from odin_recipes_app import app
-from odin_recipes_app.recipes.recipes import boiled_chicken
+from odin_recipes_app.recipes.recipes import *
 # import os
 
 # dirname = os.path.dirname(__file__)
@@ -17,12 +17,13 @@ def index():
 @app.route("/<recipe_name>")
 def recipe(recipe_name):
 
-    if recipe_name == boiled_chicken["name"].replace(" ","").lower():
+    list_of_recipes = list(map(lambda x:x.lower(),recipe_dict.keys()))
+    if recipe_name in list_of_recipes:
         return render_template(
             "recipe.html",
-            title=recipe_name,
-            recipe=boiled_chicken
+            title=recipe_dict[recipe_name]["name"],
+            recipe=recipe_dict[recipe_name]
         )
-    return redirect('/')
+    return redirect(url_for('/'))
 
 
